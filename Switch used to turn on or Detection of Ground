@@ -1,0 +1,22 @@
+int led_Pin = 8;
+int button_Pin = 2;
+int switch_state;
+
+void setup() {
+  pinMode(led_Pin, OUTPUT);
+  pinMode(button_Pin, INPUT_PULLUP); 
+}
+
+void loop() {
+  switch_state = digitalRead(button_Pin);
+  
+  if (switch_state == LOW) {  
+    digitalWrite(led_Pin, HIGH);  
+    delay(50);
+    digitalWrite(led_Pin,LOW);
+    delay(50);
+  }
+  else { 
+    digitalWrite(led_Pin, LOW);   
+  }
+}

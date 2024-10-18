@@ -6,7 +6,7 @@ const int Analog_pin = A0; // Analog input pin
 void setup() {
   // Initialize pin 9 as an OUTPUT
   pinMode(PWM_pin, OUTPUT);
-  // Start the serial communication for monitoring
+  // Starting the serial communication for monitoring
   Serial.begin(9600);
 }
 
@@ -20,7 +20,7 @@ void loop() {
 
     // Print both the PWM value and A0 reading to Serial Plotter
     Serial.print("Ramp_Signal:");
-    Serial.print(i); // PWM value
+    Serial.print(i); // PWM value for pin 9
     Serial.print(",PWM_Output:"); 
     Serial.println(Sensor_value); // Analog value from A0
     
@@ -36,7 +36,7 @@ void loop() {
 
     // Print both the PWM value and A0 reading to Serial Plotter
     Serial.print("Ramp_Signal:");
-    Serial.print(i); // PWM value
+    Serial.print(i); // PWM value for pin 9
     Serial.print(",PWM_Output:"); 
     Serial.println(Sensor_value); // Analog value from A0
     
